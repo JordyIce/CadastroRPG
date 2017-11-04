@@ -1,14 +1,19 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
 
 
 <div class="w3-container w3-black">
 	<h2>Dados do Cadastro</h2>
     <form class="card-block" (ngSubmit)="enviarDados()" *ngIf="! enviado" #formulario="ngForm">
         
-		
+
 
 		<div class="form-group" [class.has-success]="nome.valid" [class.has-danger]="nome.invalid">
-            <label for="nome">Nome Usuário</label>
+            <label for="nome" >Nome Usuário</label>
             <input class="form-control" [class.form-control-success]="nome.valid" type="text" id="nome" [(ngModel)]="_nome" name="nome" #nome="ngModel" placeholder="Digite o Nome" required>
 
             <div [hidden]="nome.valid || nome.pristine">
@@ -82,5 +87,5 @@
     </div>
 	
 	
-    <button (click)="voltar()">Voltar</button>
+    <button class="css3button" (click)="voltar()">Voltar</button>
 </div>
