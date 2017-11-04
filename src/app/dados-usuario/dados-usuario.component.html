@@ -1,9 +1,12 @@
-<h3 class="container col-6">
-    Dados do cadastro
-</h3>
-<div class="card container col-6">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<div class="w3-container w3-black">
+	<h2>Dados do Cadastro</h2>
     <form class="card-block" (ngSubmit)="enviarDados()" *ngIf="! enviado" #formulario="ngForm">
         
+		
+
 		<div class="form-group" [class.has-success]="nome.valid" [class.has-danger]="nome.invalid">
             <label for="nome">Nome Usuário</label>
             <input class="form-control" [class.form-control-success]="nome.valid" type="text" id="nome" [(ngModel)]="_nome" name="nome" #nome="ngModel" placeholder="Digite o Nome" required>
@@ -53,11 +56,11 @@
         </select>
         </div>
 
-        <button class="btn" type="submit" [disabled]="formulario.invalid">Cadastrar</button>
+        <button class="css3button" type="submit" [disabled]="formulario.invalid">Cadastrar</button>
     </form>
 </div>
 
-<div class="card card-block container col-6" *ngIf="enviado">
+<div class="w3-container w3-black col-6" *ngIf="enviado">
     <div>
         <h2>Dados do contato Enviado!</h2>
     </div>
