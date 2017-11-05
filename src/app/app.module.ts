@@ -9,6 +9,11 @@ import { ListaUsuarioComponent } from './lista-usuario/lista-usuario.component';
 import { DetalheUsuarioComponent } from './detalhe-usuario/detalhe-usuario.component';
 import { ContatosDataBaseService } from './servicos/contatos-data-base.service';
 
+import { FirebaseConfig } from './../environments/firebase.config';
+import { AngularFireModule } from 'angularfire2/index';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +25,7 @@ import { ContatosDataBaseService } from './servicos/contatos-data-base.service';
     BrowserModule,
     FormsModule,
     HttpModule
+	//AngularFireModule.initializeApp(FirebaseConfig)
   ],
   providers: [ContatosDataBaseService],
   bootstrap: [AppComponent]

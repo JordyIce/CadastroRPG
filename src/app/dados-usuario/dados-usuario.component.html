@@ -13,6 +13,7 @@
 
 
 		<div class="form-group" [class.has-success]="nome.valid" [class.has-danger]="nome.invalid">
+		    <i class="ra ra-player ra-2x"></i>
             <label for="nome" >Nome Usuário</label>
             <input class="form-control" [class.form-control-success]="nome.valid" type="text" id="nome" [(ngModel)]="_nome" name="nome" #nome="ngModel" placeholder="Digite o Nome" required>
 
@@ -24,6 +25,7 @@
 
         
 		<div class="form-group" [class.has-success]="nick.valid" [class.has-danger]="nick.invalid">
+			<i class="ra ra-player-pyromaniac ra-2x"></i>
             <label for="nick">Nick</label>
             <input class="form-control" [class.form-control-success]="nome.valid" type="text" id="nick" [(ngModel)]="_nick" name="nick" #nick="ngModel" placeholder="Digite o Nick" required>
 
@@ -35,19 +37,31 @@
 
         
 		<div class="form-group">
+		<i class="ra ra-book ra-2x"></i>
             <label for="email">Email</label>
             <input class="form-control" type="text" id="email" [(ngModel)]="_email" name="email" #email="ngModel">
         </div>
 
         
 		<div class="form-group">
+		<i class="ra ra-axe ra-2x"></i>
+		<i class="ra ra-fire ra-2x"></i>
+		<i class="ra ra-ankh ra-2x"></i>
+		<i class="ra ra-archer ra-2x"></i>
+		<i class="ra ra-daggers ra-2x"></i>
+		<i class="ra ra-shield ra-2x"></i>
+			
+		
+		<br>
             <label for="tipo">Selecione sua Classe</label>
-            <select id="tipo" [(ngModel)]="_tipo" name="tipo" #tipo="ngModel">
-            <option class="form-control" *ngFor="let item of tipos"  [value]="item">{{item}}</option>
+            <select id="tipo" [(ngModel)]="_tipo" name="tipo" #tipo="ngModel" >
+            <option class="form-control" *ngFor="let item of tipos"   [value]="item">{{item}} </option>
         </select>
         </div>
 		
 		<div class="form-group">
+		<i class="ra ra-uncertainty ra-2x"></i>
+		<br>		
             <label for="sexo">Sexo</label>
             <select id="sexo" [(ngModel)]="_sexo" name="sexo" #sexo="ngModel">
             <option class="form-control" *ngFor="let item of sexos"  [value]="item">{{item}}</option>
@@ -55,6 +69,12 @@
         </div>
 		
 		<div class="form-group">
+			<i class="ra ra-muscle-up ra-2x"></i>
+			<i class="ra ra-aware ra-2x"></i>
+			<i class="ra ra-hearts ra-2x"></i>
+			<i class="ra ra-player-dodge ra-2x"></i>
+			<i class="ra ra-player-teleport ra-2x"></i>
+			<br>
             <label for="car">Características</label>
             <select id="car" [(ngModel)]="_car" name="char" #car="ngModel">
             <option class="form-control" *ngFor="let item of cars"  [value]="item">{{item}}</option>
